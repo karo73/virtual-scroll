@@ -82,7 +82,7 @@ const initScroll = () => {
 		const getScrolledCurrentIndex = Math.floor(scrollTop / getScrollItemHeight()) || 0;
 
 		// Showing in the browser current item index
-		scroll.querySelector(".scroll__item-number").innerHTML = Math.floor(getScrolledCurrentIndex);
+		scroll.querySelector(".scroll__item-number").innerHTML = getScrolledCurrentIndex;
 
 		scrollEnd(() => {
 
