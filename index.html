@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Virtual scroll</title>
+	<style>
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: #838383;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		.scroll {
+			margin: 0 auto;
+			width: 600px;
+		}
+
+		.scroll__wrapper {
+			background-color: #FFFFFF;
+			border: 2px solid #999999;
+			max-height: 400px;
+			overflow: auto;
+		}
+
+		.scroll__wrapper::-webkit-scrollbar {
+			background-color: #EEEEEE;
+			height: 10px;
+			width: 10px;
+		}
+
+		.scroll__wrapper::-webkit-scrollbar-thumb {
+			background: #000000;
+			border-radius: 8px;
+		}
+
+		.scroll__item-number {
+			color: #FFFFFF;
+			font-size: 40px;
+			height: 60px;
+			line-height: 60px;
+			margin: 20px 0;
+			text-align: center;
+		}
+
+		.scroll__content {
+			border-bottom: 1px solid #999999;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+
+		.scroll__title {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+
+		.scroll__text {
+			font-size: 14px;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		.scroll__start-padding,
+		.scroll__end-padding {
+			background: repeating-linear-gradient(#EEEEEE, #EEEEEE 10px, #FFFFFF 20px, #FFFFFF 25px);
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="scroll">
+		<div class="scroll__item-number">0</div>
+		<div class="scroll__wrapper">
+			<div class="scroll__start-padding"></div>
+			<div class="scroll__list"></div>
+			<div class="scroll__end-padding"></div>
+		</div>
+	</div>
+	
+	<script src="script.js"></script>
+
+</body>
+</html>
